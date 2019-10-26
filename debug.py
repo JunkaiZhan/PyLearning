@@ -2,10 +2,12 @@
 
 # Author: zhanjunkai
 
-#----------------------------------------------
+import traceback
+
+# ----------------------------------------------
 # Function: add(op_A, op_B)
 # Description: adder for operands > 0
-#----------------------------------------------
+# ----------------------------------------------
 def add(op_A, op_B):
     if not isinstance(op_A, int):
         raise Exception("The operand A is not int type. ")
@@ -18,18 +20,19 @@ def add(op_A, op_B):
     else:
         return op_A + op_B
 
-#----------------------------------------------
+# ----------------------------------------------
 # Function: debug_demo()
 # Description: a debug demo without print
-#----------------------------------------------
+# ----------------------------------------------
 def debug_demo():
 
     # 1. use try and except and raise -----------------
     try:
-        sum = add(op_A = -2, op_B = 8)
+        sum = add(op_A = 2, op_B = "Hello")
         print("The sum is " + str(sum))
     except Exception as err:
-        print("An exception happend: " + str(err))
+        print("An exception happend: " + str(err)) # Just print the error message
+        print(traceback.format_exc())              # Print the error trace for debug
     
 
 #----------------------------------------------
@@ -38,6 +41,7 @@ def debug_demo():
 #----------------------------------------------
 def main():
     debug_demo()
+
 
 if __name__ == '__main__':
     main()
