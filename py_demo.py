@@ -19,6 +19,7 @@ def create_pydemo():
     file = open(OUT_FILE_NAME + ".py", 'w')
 
     text = '#!/usr/bin/python3\n# -*- coding: UTF-8 -*-\n# Author: zhanjunkai\n\n'
+    text += 'import sys\nimport os\nimport logging\n\n'
     text += '#----------------------------------------------\n'
     text += '# Function: ' + OUT_FILE_NAME + "()\n"
     text += '# Description: \n'
@@ -29,6 +30,9 @@ def create_pydemo():
     text += '# Description: run the main program\n'
     text += '#----------------------------------------------\n'
     text += 'def main():\n'
+    text += '\n    logging.basicConfig(level=logging.DEBUG, format=" %(asctime)s - %(levelname)s - %(message)s")\n'
+    text += '    logging.disable(logging.DEBUG)\n\n'
+    text += '    logging.debug(\"' + OUT_FILE_NAME + ' is performing ...\")\n'
     text += '    ' + OUT_FILE_NAME + "()\n\n"
     text += 'if __name__ == \"__main__\":\n'
     text += '    main()\n'

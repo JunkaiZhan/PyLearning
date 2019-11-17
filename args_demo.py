@@ -10,7 +10,7 @@ def args_demo():
 
     print("-------------- What is *args ----------------")
     #? -1- Pass a varaible number of arguments to a function
-    #? -2- *args is used to send a non-keyworded variable length argument list 
+    #? -2- *args is used to send a non-keyworded variable length argument tuple 
     #?     to the function
     def text_args(first_arg, *args):
         print("First args is: ", first_arg)
