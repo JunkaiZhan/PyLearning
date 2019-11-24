@@ -16,7 +16,7 @@ def create_pydemo():
 
     global OUT_FILE_NAME
     
-    file = open(OUT_FILE_NAME + ".py", 'w')
+    file = open("./DataAnalysis/" + OUT_FILE_NAME + ".py", 'w')
 
     text = '#!/usr/bin/python3\n# -*- coding: UTF-8 -*-\n# Author: zhanjunkai\n\n'
     text += 'import sys\nimport os\nimport logging\n\n'
