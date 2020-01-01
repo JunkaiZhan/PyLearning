@@ -28,9 +28,10 @@ def plot_percentage(name, cover, all):
     cperc  = round(100.0 * perc)
     ncperc = 100 - cperc
 
-    print("-" * 130)
-    print(name + " |" + "#" * cperc + " " * ncperc + "|" + "  %.2f %%  " % (perc * 100.0) + " FROM %d/%d" % (cover, all))
-    print("-" * 130)
+    print("\033[1;36m-\033[0m" * 130)
+    print("\033[1;32m" + name + "\033[0m"+ " \033[1;33m[" + "#" * cperc + " " * ncperc + "]\033[0m" + 
+        "\033[1;32m  %.2f %%  " % (perc * 100.0) + " FROM %d/%d\033[0m" % (cover, all))
+    print("\033[1;36m-\033[0m" * 130)
 
 
 # Plot and show the MISC checking result --------------------------------
