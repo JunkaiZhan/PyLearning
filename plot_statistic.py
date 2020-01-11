@@ -24,8 +24,8 @@ def get_file_name(file_path):
 # Plot the percentage on terminal ---------------------------------------
 def plot_percentage(name, cover, all):
     
-    perc = cover / all
-    cperc  = round(100.0 * perc)
+    perc   = cover / all
+    cperc  = int(round(100.0 * perc))
     ncperc = 100 - cperc
 
     # print("-" * 130)
@@ -35,7 +35,7 @@ def plot_percentage(name, cover, all):
 
 
 # Plot and show the MISC checking result --------------------------------
-def plot_misc(kwargv):
+def plot_statistic(kwargv):
 
     # Calculate the option number
     opts_num    = math.ceil(len(kwargv) / 2)

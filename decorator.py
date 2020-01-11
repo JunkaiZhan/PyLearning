@@ -163,13 +163,13 @@ def decorator_demo():
     print("\n>>>>> Step 7: Add log message for function ")
 
     def logit(func_old): # Decorator is function, so it can have args
-        @wraps(func_need_dec)
+        @wraps(func_old)
         def with_log(*args): # With argument, send to func_need_dec
             print(func_old.__name__ + " was called")
             return func_old(*args)
         return with_log
     
-    @pysnooper.snoop(prefix="hello func ")
+    # @pysnooper.snoop(prefix="hello func ")
     @logit
     def hello(name):
         return "Hello, " + name
