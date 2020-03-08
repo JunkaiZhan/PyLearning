@@ -1,0 +1,11 @@
+
+# ---------------------------------------------------
+# Function: extract_axi_signal(x,x,x)
+# Description: Arg config is the json info read from 
+#   interface_config.json, Arg hier_dict is the full
+#   path dict based on hier_auto file, and Arg signal_
+#   file_path is the directory path of NPI output.
+# ---------------------------------------------------
+def extract_axi_signal(config, hier_dict, signal_file_path):
+
+    

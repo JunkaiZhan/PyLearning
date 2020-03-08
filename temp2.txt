@@ -1,0 +1,8 @@
+    axi_aw_signals = config["axi_aw_signals_level_1"]
+    axi_ar_signals = config["axi_ar_signals_level_1"]
+    axi_w_signals  = config["axi_w_signals"]
+    axi_r_signals  = config["axi_r_signals"]
+    axi_b_signal   = config["axi_b_signals"]
+
+    # 
+
